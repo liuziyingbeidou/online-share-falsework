@@ -24,21 +24,28 @@ public class Responses {
     }
     
     /**
-     * 调用 接口成功，但是处理失败，返回失败信息
+     * 调用 接口成功
+     * @param data
+     * @return
+     */
+    public static ResponseEntity dealSuccess(String data) {
+        DealResultDto dealResultDto = new DealResultDto();
+        dealResultDto.setReturnCode("S");
+        dealResultDto.setData(data);
+        dealResultDto.setReturnMessage("处理成功");
+        return new ResponseEntity(dealResultDto,HttpStatus.OK);
+    }
+
+    /**
+     * 处理失败
      * @param errorMessage
      * @return
      */
-    public static ResponseEntity dealSuccess(String errorMessage) {
-        DealResultDto dealResultDto = new DealResultDto();
-        dealResultDto.setReturnCode("E");
-        dealResultDto.setReturnMessage(errorMessage);
-        return new ResponseEntity(dealResultDto,HttpStatus.OK);
-    }
     public static ResponseEntity dealError(String errorMessage) {
         DealResultDto dealResultDto = new DealResultDto();
         dealResultDto.setReturnCode("E");
-        dealResultDto.setReturnMessage(errorMessage);
-        return new ResponseEntity(dealResultDto,HttpStatus.BAD_REQUEST);
+        dealResultDto.setReturnMessage("错误:"+errorMessage);
+        return new ResponseEntity(dealResultDto,HttpStatus.OK);
     }
 
     public static ResponseEntity exception(HttpStatus httpStatus,BusinessErrorModel model) {

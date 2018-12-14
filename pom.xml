@@ -43,6 +43,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.codearte.props2yaml/props2yaml -->
+		<dependency>
+			<groupId>io.codearte.props2yaml</groupId>
+			<artifactId>props2yaml</artifactId>
+			<version>0.5</version>
+		</dependency>
+
 		<!-- swagger-springmvc start-->
 		<dependency>
 			<groupId>io.springfox</groupId>
