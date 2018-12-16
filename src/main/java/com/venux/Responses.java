@@ -1,9 +1,12 @@
 package com.venux;
 
+import com.alibaba.fastjson.JSONObject;
 import com.venux.dto.DealResultDto;
 import com.venux.exception.BusinessErrorModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import java.util.List;
 
 /**
  * 接口响应
@@ -22,13 +25,24 @@ public class Responses {
         dealResultDto.setReturnCode("S");
         return new ResponseEntity(dealResultDto,HttpStatus.OK);
     }
-    
-    /**
-     * 调用 接口成功
-     * @param data
-     * @return
-     */
+
     public static ResponseEntity dealSuccess(String data) {
+        DealResultDto dealResultDto = new DealResultDto();
+        dealResultDto.setReturnCode("S");
+        dealResultDto.setData(data);
+        dealResultDto.setReturnMessage("处理成功");
+        return new ResponseEntity(dealResultDto,HttpStatus.OK);
+    }
+
+    public static ResponseEntity dealSuccess(List<String> data) {
+        DealResultDto dealResultDto = new DealResultDto();
+        dealResultDto.setReturnCode("S");
+        dealResultDto.setData(data);
+        dealResultDto.setReturnMessage("处理成功");
+        return new ResponseEntity(dealResultDto,HttpStatus.OK);
+    }
+
+    public static ResponseEntity dealSuccess(JSONObject data) {
         DealResultDto dealResultDto = new DealResultDto();
         dealResultDto.setReturnCode("S");
         dealResultDto.setData(data);
@@ -44,7 +58,7 @@ public class Responses {
     public static ResponseEntity dealError(String errorMessage) {
         DealResultDto dealResultDto = new DealResultDto();
         dealResultDto.setReturnCode("E");
-        dealResultDto.setReturnMessage("错误:"+errorMessage);
+        dealResultDto.setReturnMessage(errorMessage);
         return new ResponseEntity(dealResultDto,HttpStatus.OK);
     }
 

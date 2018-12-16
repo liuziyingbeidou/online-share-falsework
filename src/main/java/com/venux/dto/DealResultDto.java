@@ -7,12 +7,12 @@ import io.swagger.annotations.ApiModelProperty;
  * 业务处理结果DTO
  */
 @ApiModel
-public class DealResultDto {
+public class DealResultDto <T>{
 
     @ApiModelProperty("结果码,S-成功,E-失败")
     private String returnCode;
     @ApiModelProperty("返回数据")
-    private String data;
+    private T data;
     @ApiModelProperty("失败原因")
     private String returnMessage;
 
@@ -32,11 +32,11 @@ public class DealResultDto {
         this.returnMessage = returnMessage;
     }
 
-    public String getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(T data) {
         this.data = data;
     }
 

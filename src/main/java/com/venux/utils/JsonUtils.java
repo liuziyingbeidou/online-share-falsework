@@ -31,7 +31,7 @@ package com.venux.utils;
  * </p><p>5、打印：当前字符。
  * 
  */
-public class JsonFormatTool
+public class JsonUtils
 {
     /**
      * 单位缩进字符串。
@@ -137,7 +137,7 @@ public class JsonFormatTool
     }
  
     public static void main(String[] args) {
-        JsonFormatTool json = new JsonFormatTool();
+        JsonUtils json = new JsonUtils();
         String str = "{'age':23,'aihao':['pashan','movies'],'name':{'firstName':'zhang','lastName':'san','aihao':['pashan','movies','name':{'firstName':'zhang','lastName':'san','aihao':['pashan','movies']}]}}";
         String result = json.formatJson(str);
  
