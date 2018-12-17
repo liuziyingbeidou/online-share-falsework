@@ -4,7 +4,7 @@ package com.venux.controller;/**
 
 import com.venux.Responses;
 import com.venux.dto.DealResultDto;
-import io.codearte.props2yaml.Props2YAML;
+import com.venux.utils.props2yaml.Props2YAML;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,7 +26,7 @@ class PropsController {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping(value = "toyaml",method = RequestMethod.POST)
+    @RequestMapping(value = "toYaml",method = RequestMethod.POST)
     public ResponseEntity<DealResultDto> propsToYaml(@RequestBody String propsContent) throws Exception{
         if(StringUtils.isBlank(propsContent)){
             return Responses.dealError("没有数据可转换哟");
