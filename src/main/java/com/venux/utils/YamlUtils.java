@@ -1,17 +1,15 @@
 package com.venux.utils;
 
+import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLParser;
+import org.yaml.snakeyaml.Yaml;
+
 import java.io.StringReader;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
-import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.fasterxml.jackson.dataformat.yaml.YAMLParser;
-import org.apache.commons.io.FileUtils;
-import org.yaml.snakeyaml.Yaml;
-
-import com.alibaba.fastjson.JSONObject;
 
 /**
  * 

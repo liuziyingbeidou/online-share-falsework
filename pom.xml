@@ -44,11 +44,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.codearte.props2yaml/props2yaml -->
-		<dependency>
+<!--		<dependency>
 			<groupId>io.codearte.props2yaml</groupId>
 			<artifactId>props2yaml</artifactId>
 			<version>0.5</version>
-		</dependency>
+		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
 		<dependency>
 			<groupId>org.yaml</groupId>
