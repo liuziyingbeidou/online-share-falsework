@@ -26,7 +26,7 @@ class PropsController {
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping(value = "toyaml",method = RequestMethod.POST)
+    @RequestMapping(value = "toYaml",method = RequestMethod.POST)
     public ResponseEntity<DealResultDto> propsToYaml(@RequestBody String propsContent) throws Exception{
         if(StringUtils.isBlank(propsContent)){
             return Responses.dealError("没有数据可转换哟");
