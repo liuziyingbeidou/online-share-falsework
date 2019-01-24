@@ -8,7 +8,6 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 public class FalseWorkApplication {
 
 	public static void main(String[] args) {

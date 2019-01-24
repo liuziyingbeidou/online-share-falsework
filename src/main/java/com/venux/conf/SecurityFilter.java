@@ -1,5 +1,7 @@
 package com.venux.conf;
 
+import org.springframework.context.annotation.Configuration;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
